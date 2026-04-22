@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <!-- Header -->
+        <div class="dash-header">
+            <h2>Task Dashboard</h2>
+            <button class="btn-logout logout" onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Add Task -->
+        <div class="add-task-card">
+            <h3>Add New Task</h3>
+            <input type="text" id="task-title" placeholder="Task title" />
+            <textarea id="task-desc" rows="3" placeholder="Task description (optional)"></textarea>
+            <button class="btn-add" id="addTaskBtn" onclick="createTask()">Add Task</button>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-section">
+            <h2>My Tasks</h2>
+            <ul class="task-list" id="task-list">
+                <p class="empty-msg">Loading tasks...</p>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        fetchTasks();
+    </script>
+</body>
+</html>
